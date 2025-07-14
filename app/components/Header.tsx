@@ -9,18 +9,19 @@ const Header = () => {
   const [lastScrollY, setLastScrollY] = useState(0);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  const handleScroll = () => {
-    if (typeof window !== 'undefined') { // Check if window is defined (client-side)
-      if (window.scrollY > lastScrollY && window.scrollY > 100) { // scrolled down and past a threshold
-        setIsVisible(false);
-      } else { // scrolled up
-        setIsVisible(true);
-      }
-      setLastScrollY(window.scrollY);
-    }
-  };
-
   useEffect(() => {
+    const handleScroll = () => {
+      if (typeof window !== 'undefined') {
+        const currentScrollY = window.scrollY;
+        if (currentScrollY > lastScrollY && currentScrollY > 100) {
+          setIsVisible(false);
+        } else {
+          setIsVisible(true);
+        }
+        setLastScrollY(currentScrollY);
+      }
+    };
+
     if (typeof window !== 'undefined') {
       window.addEventListener('scroll', handleScroll);
       return () => {
