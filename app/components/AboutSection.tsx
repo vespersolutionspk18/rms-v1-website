@@ -31,7 +31,7 @@ const AboutSection = () => {
         tl.to(wordsSpans[i], { color: targetColor, ease: 'none' }, i * 0.1); // Adjust timing for word reveal
       });
     }
-  }, [words.length]);
+  }, [words]);
 
   return (
     <section

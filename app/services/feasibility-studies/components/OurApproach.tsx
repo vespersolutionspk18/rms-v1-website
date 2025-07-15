@@ -42,7 +42,7 @@ const OurApproach = () => {
                 Our Approach
               </h2>
               <p className="text-lg leading-relaxed text-gray-300 mb-12">
-                RMS adopts a collaborative, data-driven, and holistic approach. Our teams comprise experts across various fields, ensuring every aspect of a project's feasibility is thoroughly examined. We utilize advanced analytical tools and industry best practices to deliver precise, actionable insights tailored to your specific objectives. Our ISO certification underscores our commitment to quality and excellence in every study.
+                RMS adopts a collaborative, data-driven, and holistic approach. Our teams comprise experts across various fields, ensuring every aspect of a project&apos;s feasibility is thoroughly examined. We utilize advanced analytical tools and industry best practices to deliver precise, actionable insights tailored to your specific objectives. Our ISO certification underscores our commitment to quality and excellence in every study.
               </p>
               
               <div className="flex items-center gap-8 pt-8 border-t border-gray-700">
@@ -63,7 +63,7 @@ const OurApproach = () => {
 
             {/* Right Content - Process Steps */}
             <div className="space-y-6">
-              {approachSteps.map((step, index) => (
+              {approachSteps.map((step) => (
                 <div 
                   key={step.number}
                   className="flex gap-6 items-start group"

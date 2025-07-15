@@ -1,7 +1,6 @@
 "use client";
 
 import React from 'react';
-import Button from '@/app/components/Button';
 
 const FeasibilityHero = () => {
   return (
